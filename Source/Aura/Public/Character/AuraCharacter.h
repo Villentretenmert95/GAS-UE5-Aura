@@ -16,6 +16,8 @@ class AURA_API AAuraCharacter : public AAuraCharacterBase
 	GENERATED_BODY()
 public:
 	AAuraCharacter();
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override; 
 protected:
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	float DefaultArmLength = 600.f;
@@ -24,4 +26,5 @@ private:
 	USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* ViewCamera;
+	void InitAbilityActorInfo();
 };
