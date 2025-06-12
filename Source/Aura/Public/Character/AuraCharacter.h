@@ -26,5 +26,5 @@ private:
 	USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* ViewCamera;
-	void InitAbilityActorInfo();
+	virtual void InitAbilityActorInfo() override;
 };
