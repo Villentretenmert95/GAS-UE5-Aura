@@ -35,7 +35,7 @@ protected:
 
 	virtual void InitAbilityActorInfo();
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Attributes")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Attributes")
 	TSubclassOf<UGameplayEffect> DefaultPrimaryAttributes;
 
 	void InitializePrimaryAttributes() const;
